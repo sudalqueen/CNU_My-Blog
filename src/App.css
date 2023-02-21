@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+body {
+	width: 760px;
+	margin: auto !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px;
+	border-bottom: 1px solid #eee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile .name {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	font-weight: bold;
+	color: #222;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.profile .description {
+	white-space: pre-wrap;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	margin-top: 0.25rem;
+	color: #222;
+	letter-spacing: -0.004em;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-pic img {
+	display: block;
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.325rem;
+	width: 8rem;
+	height: 3rem;
+	text-decoration: none;
+	transition: color 0.25s ease-in-out 0s;
+	font-weight: 600;
+	margin: auto;
+	padding-top: 20px;
+}
+
+.nav a {
+	color: #777;
+}
+
+.nav .active {
+	color: rgb(50, 148, 248);
+}
+
+a {
+	color: #222;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #222;
+	text-decoration: none;
+}
+
+a:link {
+	color: #222;
+	text-decoration: none;
+}
+
+.post-list-item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100px;
+	padding: 2rem;
+	overflow: hidden;
+	transition: border 0.2s ease 0s;
+	cursor: pointer;
+	border-bottom: 1px solid #eee;
+	text-decoration: none;
+}
+
+button {
+	background-color: rgb(50, 148, 248);
+	border: 1px solid rgb(50, 148, 248);
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.outlined-button {
+	background-color: #fff;
+	color: rgb(50, 148, 248);
+}
+
+.danger-button {
+	background-color: red;
+	border: 1px solid red;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0 10px;
+}
+
+.write-title {
+	width: 100%;
+	margin: 20px 0;
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.write-content {
+	width: 100%;
+	height: 500px;
+	border: 1px solid #ddd;
+	resize: none;
+}
+
+.mr {
+	margin-right: 10px;
+}
+
+.no-posts {
+	margin-top: 20px;
+	color: #222;
+	font-size: 16px;
+}
+
+.tools {
+	text-align: right;
+	margin: 10px 0;
+}
+
+.home-layout {
+	display: flex;
+}
+
+.tag-list {
+	width: 20%;
+}
+
+.tag-list ul {
+	padding-inline-start: 0;
+}
+
+.tag-list li {
+	list-style: none;
+	color: #444;
+}
+
+.tag-list li:hover {
+	color: rgb(50, 148, 248);
+	cursor: pointer;
+}
+
+.tag-list li.selected{
+	color: rgb(50, 148, 248);
+	font-weight: bold;
+}
+
+.post-list {
+	width: 80%;
 }
